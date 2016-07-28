@@ -90,9 +90,27 @@ $(document).ready(function(){
     }).mouseleave(function(){
       $(".info", this).hide();
     });
-
-
 });
 
 
+function initMap() {
 
+  var myLatLng = {lat: 47.6586019, lng: 9.4338951};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 3,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    icon: {
+        size: new google.maps.Size(30, 30),
+        scaledSize: new google.maps.Size(30, 30),
+        url: 'img/logo.png'
+    },
+    title: 'Arcanaeum Headquarters'
+  });
+
+}
