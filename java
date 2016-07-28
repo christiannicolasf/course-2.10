@@ -67,4 +67,17 @@ $(document).ready(function(){
               }	
         });
 
+  // work section
+  for(var i = 0; i < works.length; ++i) {
+      $("#work").append('\
+       <div class="col-sm-6 col-md-3" id="pillars">\
+       <img class="img-responsive" src=" ' + works[i] + '" id="icons">\
+       </div>\
+        ');
+      var images = $("#work img");
+      if (i%2 === 0) {
+      $(images[i]).css("border-bottom", "2px solid black");  
+    } else {
+      $(images[i]).css("border-bottom", "2px solid white");
+    }};
 });
